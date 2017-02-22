@@ -10,4 +10,15 @@
 
 @implementation Photo
 
+-(instancetype)initWithImage:(UIImage *)image Subject:(NSString *)subject AndLocation:(NSString *)location
+{
+    self = [super init];
+    if (self) {
+        self.image = image;
+        self.subject = subject;
+        self.location = location;
+    }
+    return self;
+}
+
 @end

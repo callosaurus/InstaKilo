@@ -1,5 +1,5 @@
 //
-//  MyCollectionViewCell.h
+//  PhotoCell.h
 //  InstaKilo
 //
 //  Created by Callum Davies on 2017-02-22.
@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Photo.h"
 
-@interface MyCollectionViewCell : UICollectionViewCell
+@interface PhotoCell : UICollectionViewCell
+
+@property (weak, nonatomic) IBOutlet UIImageView *photoCellImageView;
 
 @end

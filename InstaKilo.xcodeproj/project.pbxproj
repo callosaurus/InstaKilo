@@ -13,8 +13,8 @@
 		3F4D0B461E5E0FE60036BA86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4D0B441E5E0FE60036BA86 /* Main.storyboard */; };
 		3F4D0B481E5E0FE60036BA86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4D0B471E5E0FE60036BA86 /* Assets.xcassets */; };
 		3F4D0B4B1E5E0FE60036BA86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4D0B491E5E0FE60036BA86 /* LaunchScreen.storyboard */; };
-		3F4D0B541E5E14AA0036BA86 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4D0B531E5E14AA0036BA86 /* MyCollectionViewCell.m */; };
 		3F4D0B571E5E14BE0036BA86 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4D0B561E5E14BE0036BA86 /* Photo.m */; };
+		3F4D0B5D1E5E2D890036BA86 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4D0B5C1E5E2D890036BA86 /* PhotoCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +28,10 @@
 		3F4D0B471E5E0FE60036BA86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F4D0B4A1E5E0FE60036BA86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F4D0B4C1E5E0FE60036BA86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F4D0B521E5E14AA0036BA86 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
-		3F4D0B531E5E14AA0036BA86 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
 		3F4D0B551E5E14BE0036BA86 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		3F4D0B561E5E14BE0036BA86 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		3F4D0B5B1E5E2D890036BA86 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
+		3F4D0B5C1E5E2D890036BA86 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +98,8 @@
 		3F4D0B591E5E151F0036BA86 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3F4D0B521E5E14AA0036BA86 /* MyCollectionViewCell.h */,
-				3F4D0B531E5E14AA0036BA86 /* MyCollectionViewCell.m */,
+				3F4D0B5B1E5E2D890036BA86 /* PhotoCell.h */,
+				3F4D0B5C1E5E2D890036BA86 /* PhotoCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -185,8 +185,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F4D0B431E5E0FE60036BA86 /* ViewController.m in Sources */,
+				3F4D0B5D1E5E2D890036BA86 /* PhotoCell.m in Sources */,
 				3F4D0B401E5E0FE60036BA86 /* AppDelegate.m in Sources */,
-				3F4D0B541E5E14AA0036BA86 /* MyCollectionViewCell.m in Sources */,
 				3F4D0B571E5E14BE0036BA86 /* Photo.m in Sources */,
 				3F4D0B3D1E5E0FE60036BA86 /* main.m in Sources */,
 			);
