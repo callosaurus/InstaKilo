@@ -10,13 +10,16 @@
 
 @implementation PhotoCell
 
-- (instancetype)init
+-(void)setPhoto:(Photo *)photo
 {
-    self = [super init];
-    if (self) {
-//        self.photoCellImageView = [[UIImageView alloc] initWithImage:self.photo.image];
-    }
-    return self;
+    _photo = photo;
+    
+    [self configure];
+}
+
+-(void)configure
+{
+    self.photoCellImageView.image = self.photo.image;
 }
 
 @end
