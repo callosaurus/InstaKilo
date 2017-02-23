@@ -15,7 +15,12 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSArray *photos;
-@property (strong, nonatomic) NSArray *arrayOfSubjectArrays;
+@property (strong, nonatomic) NSMutableArray *arrayOfSubjectArrays;
+@property (strong, nonatomic) NSMutableArray *scenePhotos;
+@property (strong, nonatomic) NSMutableArray *characterPhotos;
+@property (strong, nonatomic) NSMutableArray *alaraPhotos;
+@property (strong, nonatomic) NSMutableArray *fantasiaPhotos;
+@property (strong, nonatomic) NSMutableArray *westerosPhotos;
 
 @end
 
@@ -47,34 +52,44 @@
                     photo10,
                     ];
     
-    //make subarrays of subject
-    NSMutableArray *scenePhotos = [[[NSArray alloc] init] mutableCopy];
-    NSMutableArray *characterPhotos = [[[NSArray alloc] init] mutableCopy];
-    self.arrayOfSubjectArrays = [NSArray arrayWithObjects:scenePhotos, characterPhotos, nil];
+
+    self.scenePhotos = [[[NSArray alloc] init] mutableCopy];
+    self.characterPhotos = [[[NSArray alloc] init] mutableCopy];
+    self.alaraPhotos = [[[NSArray alloc] init] mutableCopy];
+    self.fantasiaPhotos = [[[NSArray alloc] init] mutableCopy];
+    self.westerosPhotos = [[[NSArray alloc] init] mutableCopy];
     
+    //make subarrays of subject
     for (Photo *photo in self.photos)
     {
         if ([photo.subject isEqualToString: @"scene"]){
-            [scenePhotos addObject:photo];
+            [self.scenePhotos addObject:photo];
         } else {
-            [characterPhotos addObject:photo];
+            [self.characterPhotos addObject:photo];
         }
     }
     
-    
+    self.arrayOfSubjectArrays = [[NSArray arrayWithObjects:self.scenePhotos, self.characterPhotos, nil] mutableCopy];
     
     //make subarrays of location
-//    for (Photo *photo in self.photos)
-//    {
-//        if ([photo.location isEqualToString: @"alara"]){
-//            [scenePhotos addObject:photo];
-//        } else {
-//            [characterPhotos addObject:photo];
-//        }
-//    }
+    for (Photo *photo in self.photos)
+    {
+        if ([photo.location isEqualToString: @"alara"]){
+            [self.alaraPhotos addObject:photo];
+        } else if ([photo.location isEqualToString: @"fantasia"]) {
+            [self.fantasiaPhotos addObject:photo];
+        } else {
+            [self.westerosPhotos addObject:photo];
+        }
+    }
     
 }
 
+
+-(void)viewDidAppear:(BOOL)animated
+{
+//    [self.collectionView reloadData];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -113,5 +128,16 @@
     }
     return nil;
 }
+
+- (IBAction)segmentControlSwitched:(UISegmentedControl *)sender {
+    if(sender.selectedSegmentIndex == 0){
+        _arrayOfSubjectArrays = [[NSArray arrayWithObjects:self.scenePhotos, self.characterPhotos, nil] mutableCopy];
+        [self.collectionView reloadData];
+    } else {
+        _arrayOfSubjectArrays = [[NSArray arrayWithObjects:self.alaraPhotos, self.fantasiaPhotos, self.westerosPhotos, nil] mutableCopy];
+        [self.collectionView reloadData];
+    }
+}
+
 
 @end
