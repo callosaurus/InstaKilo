@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dAD-jd-xnk">
-                                <rect key="frame" x="16" y="28" width="343" height="619"/>
+                                <rect key="frame" x="16" y="28" width="343" height="583"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XzW-m5-tsd">
                                     <size key="itemSize" width="165" height="165"/>
@@ -71,9 +71,8 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="eWd-6t-Jho"/>
                                 </connections>
                             </collectionView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2UP-au-y9z">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2UP-au-y9z">
                                 <rect key="frame" x="121" y="619" width="133" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Subject"/>
                                     <segment title="Location"/>
@@ -86,9 +85,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dAD-jd-xnk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5Rh-wW-jAY"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dAD-jd-xnk" secondAttribute="bottom" constant="20" id="8Tb-bb-hHm"/>
                             <constraint firstItem="dAD-jd-xnk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Nw8-vo-bFg"/>
+                            <constraint firstItem="2UP-au-y9z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PW6-LT-YuA"/>
                             <constraint firstItem="dAD-jd-xnk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="UrH-Lz-ORb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2UP-au-y9z" secondAttribute="bottom" constant="20" id="Wr2-CJ-Q99"/>
+                            <constraint firstItem="2UP-au-y9z" firstAttribute="top" secondItem="dAD-jd-xnk" secondAttribute="bottom" constant="8" id="qS6-aW-JRF"/>
                         </constraints>
                     </view>
                     <connections>
